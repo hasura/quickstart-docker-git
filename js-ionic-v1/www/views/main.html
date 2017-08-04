@@ -1,0 +1,39 @@
+<ion-view view-title="Ionic Hasura Starter" has-header="true" padding="true">
+  <ion-content padding="true">
+    <div class="item item-divider">
+      Auth APIs
+    </div>
+    <button class="button button-block button-stable">
+      Current User : {{user}}
+    </button>
+    <a ui-sref="register">
+      <button class="button button-block button-calm">
+        Register
+      </button>
+    </a>
+    <a ui-sref="login">
+      <button class="button button-block button-balanced">
+        Login
+      </button>
+    </a>
+    <button class="button button-block button-assertive" ng-click="doLogout()">
+      Logout
+    </button>
+    <div class="item item-divider">
+      Data APIs
+    </div>
+    <a ui-sref="query">
+      <button class="button button-block button-royal">
+        Query
+      </button>
+    </a>
+    <div class="item item-divider">
+      File APIs
+    </div>
+    <a ui-sref="filestore">
+      <button class="button button-block button-energized">
+        File
+      </button>
+    </a>
+  </ion-content>
+</ion-view>

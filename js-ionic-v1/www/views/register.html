@@ -1,0 +1,27 @@
+<ion-view view-title="Register" has-header="true" padding="true">
+  <ion-content padding="true">
+    <form ng-submit="doRegister()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Confirm password</span>
+          <input type="password" ng-model="loginData.repassword">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="loginData.email">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Register</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

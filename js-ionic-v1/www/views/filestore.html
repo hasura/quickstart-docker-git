@@ -1,0 +1,31 @@
+<ion-view view-title="Filestore" has-header="true" padding="true">
+  <ion-content padding="true">
+    <h3>Examples of using Hasura File APIs</h3>
+
+    <ul class="list">
+      <li class="item" >Goto permission tab in File Microservice <br/>on Hausra Console</li>
+      <li class="item" >Change permission to Custom</li>
+	    <li class="item" >Add this url: <br/>http://console.hasura/filestorewebhook/public</li>
+      <li class="item" >Click Save</li>
+    </ul>
+
+
+    <h4>Now, you can use the following APIs:</h4>
+
+    <p>These files can be used with img src tags also</p>
+
+    &nbsp;<br/>
+    <ul class="list">
+      <li class="item" ng-if="file">
+        <button ng-click="deleteFile(file)" class="button button-assertive button-small">delete</button>
+        <!-- <button ng-click="downloadFile(file)" class="button button-calm button-small">download</button> -->
+        {{file}}
+      </li>
+    </ul>
+
+    <input id="file-upload" ng-model="newfile" type="file" class="input-file"></input>
+    <br/>
+    <button ng-click="uploadFile()" class="button button-balanced button-block">Upload file</button>
+
+  </ion-content>
+</ion-view>
