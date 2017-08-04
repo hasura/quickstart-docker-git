@@ -1,0 +1,57 @@
+<ion-view view-title="Query" has-header="true" padding="true">
+  <ion-content padding="true">
+    <h3>Examples of using Hasura Data APIs</h3>
+    <ul class="list">
+      <li class="item">Create a new table called "todo" <br/>using Hasura Console, and add the <br/>following columns:</li>
+      <ul class="list">
+        <li class="item">id : Integer (auto-increment)</li>
+        <li class="item">title : Text</li>
+        <li class="item">user_id : Integer</li>
+        <li class="item">completed : Boolean</li>
+      </ul>
+
+      <li class="item" >Select 'id' as the Primary Key, click Create</li>
+
+      <li class="item" >Goto Permissions tab, click on<br/> 'Add permissions for a new role'.</li>
+      <li class="item" >Select User from the dropdown</li>
+      <li class="item" >Enter <pre>{"user_id": "REQ_USER_ID"}</pre> in all the Check and Filter fields.</li>
+      <li class="item" >Toggle All for Select</li>
+      <li class="item" >Tick completed on Update section</li>
+      <li class="item" >Save changes</li>
+    </ul>
+
+    <h4>Now, you can use the following APIs:</h4>
+
+    <button ng-click="getTodos()" class="button button-block button-calm" >Show ToDos</button><br/>
+    &nbsp;<br/>
+    Click on each item to mark as completed! &nbsp;<br/>
+    <div class="list">
+      <div class="item "
+           ng-repeat="todo in todos" style="cursor:pointer">
+        <ion-checkbox
+           ng-click="toggleCompleted(todo.id, !todo.completed)"
+           ng-model="todo.completed">
+          {{todo.title}}
+        </ion-checkbox>
+        <!-- <button ng-click="deleteTodo(todo.id)" class="button button-assertive button-small"><i class="icon ion-close"></i></button> -->
+      </div>
+    </div>
+
+    <div class="list">
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input ng-model="todoTitle" type="text" placeholder="toto title">
+        </label>
+        <button ng-click="addTodo(todoTitle)" class="button button-small button-balanced">
+          Add
+        </button>
+      </div>
+
+    </div>
+
+    &nbsp;<br/>
+    &nbsp;<br/>
+  </ion-content>
+</ion-view>
+
