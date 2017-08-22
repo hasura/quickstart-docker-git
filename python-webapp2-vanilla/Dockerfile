@@ -4,9 +4,7 @@ MAINTAINER Gautam Jain <gautam.jain9@yahoo.com>
 
 RUN mkdir /home/src/
 
-COPY / /home/src/
-
-RUN rm -f /home/src/Dockerfile
+COPY /app /home/src/
 
 RUN pip install -r /home/src/requirements.txt
 
